@@ -19,8 +19,13 @@
   },
   "homepage": "https://github.com/saucxs/resume#readme",
   "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "compass-mixins": "^0.12.10",
     "css-loader": "^2.1.1",
+    "end-webpack-plugin": "^1.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.5",
     "style-loader": "^0.23.1",
     "web-webpack-plugin": "^1.9.3",
     "webpack": "^3.5.6",
