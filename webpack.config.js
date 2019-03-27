@@ -1,5 +1,5 @@
 const path  = require('path');
-const {WebPlugin} = require('web-webpack-plugin');
+const { WebPlugin } = require('web-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -8,13 +8,16 @@ module.exports = {
         filename: "[name].js"
     },
     resolve: {
-
+        // 加快搜索速度
+        modules: [path.resolve(__dirname, 'node_modules')],
+        // es tree-shaking
+        mainFields: ['jsnext:main', 'browser', 'main'],
     },
     module: {
         rules: [
             {
                 test: /\.scss$/,
-                /*提取css*/
+                /*提取scss*/
                 loaders: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader', 'sass-loader']
@@ -23,7 +26,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                // 提取出css
+                /*提取css*/
                 loaders: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader'],
