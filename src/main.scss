@@ -3,6 +3,7 @@
 
 $color-gray: #d1d1d1;
 $color-green: #00b38a;
+$color-white: #ffffff;
 $font-family: 'Helvetica Neue', Helvetica, Arial, "Microsoft YaHei", sans-serif;
 
 * {
@@ -27,6 +28,25 @@ a {
   text-decoration: none;
   color: $color-green;
   @include transition(all .2s ease-in-out)
+}
+
+.content-hd a{
+  text-decoration: inherit;
+  color: $color-white;
+}
+
+.download-pdf {
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  color: #bbb;
+  margin-left: -500px;
+  font-size: 12px;
+  text-align: right;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .last-modified {
@@ -72,6 +92,14 @@ a {
       overflow: hidden;
       padding-bottom: 5px;
       margin-bottom: 5px;
+    }
+    .other-info {
+      width: 100%;
+      border-top: 2px solid darken($color-green, 2%);
+      font-weight: 300;
+      overflow: hidden;
+      padding-top: 14px;
+      line-height: 26px;
     }
     .name,
     .job,
@@ -124,6 +152,7 @@ a {
       float: right;
       text-align: right;
       padding-right: 5px;
+      margin-bottom: 10px;
       ul {
         margin: 8px 0 4px;
         @media screen and (max-width: 720px) {
@@ -259,6 +288,7 @@ a {
       }
       .item-name {
         float: left;
+        font-weight: bold;
       }
     }
     .item-bd {
@@ -299,6 +329,35 @@ a {
       .item-time {
         width: 100%;
       }
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 0 5px;
+  border: 1px solid $color-green;
+  border-radius: 3px;
+  color: $color-green;
+  font-family: Menlo, $font-family;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  &:hover {
+    color: #fff;
+    background-color: $color-green;
+  }
+}
+
+.github-footer {
+  text-align: center;
+
+  .footer-link {
+    display: inline-block;
+    color: $color-gray;
+    margin-bottom: 25px;
+    @media screen and (max-width: 1024px) {
+      margin-top: 25px;
     }
   }
 }

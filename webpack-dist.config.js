@@ -4,7 +4,6 @@ const { spawnSync } = require('child_process');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const EndWebpackPlugin = require('end-webpack-plugin');
 const { WebPlugin } = require('web-webpack-plugin');
 
 const outputPath = path.resolve(__dirname, '.public');
@@ -21,41 +20,34 @@ module.exports = {
     mainFields: ['jsnext:main', 'browser', 'main'],
   },
   module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        // 提取出css
-        loaders: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          // 压缩css
-          use: ['css-loader?minimize', 'postcss-loader', 'sass-loader']
-        }),
-        include: path.resolve(__dirname, 'src')
-      },
-      {
-        test: /\.css$/,
-        // 提取出css
-        loaders: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          // 压缩css
-          use: ['css-loader?minimize', 'postcss-loader'],
-        }),
-      },
-      {
-        test: /\.(gif|png|jpe?g|eot|woff|ttf|svg|pdf)$/,
-        loader: 'base64-inline-loader',
-      },
-    ]
+      rules: [
+          {
+              test: /\.scss$/,
+              /*提取scss*/
+              loaders: ExtractTextPlugin.extract({
+                  fallback: 'style-loader',
+                  use: ['css-loader', 'sass-loader']
+              }),
+              include: path.resolve(__dirname, 'src')
+          },
+          {
+              test: /\.css$/,
+              /*提取css*/
+              loaders: ExtractTextPlugin.extract({
+                  fallback: 'style-loader',
+                  use: ['css-loader'],
+              }),
+          },
+          {
+              test: /\.(gif|png|jpe?g|eot|woff|ttf|svg|pdf)$/,
+              loader: 'base64-inline-loader',
+          },
+      ]
   },
   entry: {
     main: './src/main.js',
   },
   plugins: [
-    new DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
     new UglifyJsPlugin({
       // 最紧凑的输出
       beautify: false,

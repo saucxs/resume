@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title> 简历 | 程新松 </title>
     <link rel="stylesheet" href="main?_inline">
 </head>
 <body>
     <p class="last-modified">最后更新于2019年3月</p>
-    <main class="content">
+    <!--<a id="downloadPdf" class="download-pdf">下载 PDF</a>-->
+    <main id="contentPdf" class="content">
         <!--基本信息-->
         <header class="content-hd">
             <section class="title">
@@ -30,13 +31,14 @@
             <section class="contact">
                 <ul>
                     <li>
-                        <a href="http://chengxinsong.cn"></a>
-                        <span class="contact-link">sau交流学习社区</span>
-                        <span class="iconfont">
-                          <svg class="icon" aria-hidden="true">
-                              <use xlink:href="#iconhome-copy"></use>
-                          </svg>
-                        </span>
+                        <a href="https://mwcxs.top">
+                            <span class="contact-link">sau交流学习社区</span>
+                            <span class="iconfont">
+                              <svg class="icon" aria-hidden="true">
+                                  <use xlink:href="#iconhome-copy"></use>
+                              </svg>
+                            </span>
+                        </a>
                     </li>
                     <li>
                         <a href="https://github.com/saucxs">
@@ -70,6 +72,12 @@
                     </li>
                 </ul>
             </section>
+            <section class="other-info">
+                <ul>
+                    <li>发明专利：“<a target="_blank" href="http://cpquery.sipo.gov.cn/">一种基于机器学习方法的汽车发动机故障预警方法</a>”，专利号:2016110496515</li>
+                    <li>发表论文：5GWN国际会议最佳论文奖（BEST PAPER AWARD）<a target="_blank" href="https://link.springer.com/chapter/10.1007%2F978-3-319-72823-0_32">A Machine Learning Based Engine Error Detection Method</a></li>
+                </ul>
+            </section>
         </header>
         <div class="content-bd">
             <div class="content-left">
@@ -95,10 +103,10 @@
                             <header class="item-hd">
                                 <h3 class="item-name">苏宁科技(南京)</h3>
                                 <span class="item-time">2017.03 至 2018.07</span>
-                                <a class="btn item-more" href="https://www.tencent.com/zh-cn/index.html">工作</a>
+                                <a class="btn item-more" href="https://www.suningcloud.com/">工作</a>
                             </header>
                             <div class="item-bd">
-                                <p class="item-des">于数据云参与<a href="https://www.suningcloud.com/">云商城</a>的前端开发部的前端开发，包括：</p>
+                                <p class="item-des">于数据云参与<a href="https://www.suningcloud.com/">云商城C端</a>和<a href="http://isv.suningcloud.com/">云商城B端</a>的前端开发部的前端开发，包括：</p>
                                 <ul class="section-content">
                                     <li>UI组件库的构建与开发</li>
                                     <li>苏宁云的PC端C侧项目优化与编码规范</li>
@@ -141,17 +149,10 @@
                             </header>
                             <div class="item-bd">
                                 <ul>
-                                    <li><a href="https://github.com/saucxs/loveBook">loveBook</a> 一个webapp的读小说等书籍的并且阅读的应用</li>
-                                    <li>
-                                        <a href="https://github.com/saucxs/happy-chat-web">happy-chat-web</a> 与
-                                        <a href="https://github.com/saucxs/happy-chat-node">happy-chat-node</a>
-                                        一个简单的畅聊系统
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/saucxs/songEagle">songEagle</a> 与
-                                        <a href="https://github.com/saucxs/songEagle_backManage">songEagle_backManage</a>
-                                        一个自己的小窝，技术博客和实验室
-                                    </li>
+                                    <li><a href="https://github.com/saucxs/songEagle">songEagle</a>基于nuxt的服务端渲染SSR，技术博客和实验室的前端</li>
+                                    <li><a href="https://github.com/saucxs/weekly/">weekly</a> 周报系统的技术栈主要是node+vue+redis+mysql+es6</li>
+                                    <li><a href="https://github.com/saucxs/loveBook">loveBook</a> 一个webApp的看小说的应用</li>
+                                    <li><a href="https://github.com/saucxs/happy-chat-web">happy-chat-web</a>一个webApp的happyChat的前端</li>
                                 </ul>
                             </div>
                         </div>
@@ -164,19 +165,28 @@
                                 <ul>
                                     <li><a href="https://github.com/saucxs/nodeJSBlog">nodeJSBlog</a> 拥有博客功能和社区分享评论功能的一个学习分享平台</li>
                                     <li><a href="https://github.com/saucxs/weekly">weekly</a> 周报系统的技术栈主要是node+vue+redis+mysql+es6</li>
-                                    <li>
-                                        <a href="https://www.suningcloud.com/">suningCloud</a> 与
-                                        <a href="http://isv.suningcloud.com">ISV</a>
-                                        苏宁云
-                                    </li>
                                 </ul>
                             </div>
                         </div>
 
-                        <!--项目:插件-->
+                        <!--项目:koa-->
                         <div class="item">
                             <header class="item-hd">
-                                <a class="btn item-more" href="https://golang.org">JavaScript</a>
+                                <a class="btn item-more" href="https://koajs.com/">koa</a>
+                            </header>
+                            <div class="item-bd">
+                                <ul>
+                                    <li><a href="https://github.com/saucxs/happy-chat-node">happy-chat-node</a>一个webApp的happyChat的后端服务</li>
+                                    <li><a href="https://github.com/saucxs/songEagle_backManage">songEagle_backManage</a>一个技术博客和实验室的后端服务</li>
+                                    <li><a href="https://github.com/saucxs/wx_phoneBook">wx_phoneBook</a> 微信小程序的通讯录的后端服务</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--项目:js插件-->
+                        <div class="item">
+                            <header class="item-hd">
+                                <a class="btn item-more" href="https://www.javascript.com/">JavaScript</a>
                             </header>
                             <div class="item-bd">
                                 <ul>
@@ -196,15 +206,119 @@
                                         <a href="https://github.com/saucxs/checkbrower">checkbrower</a>
                                         检测当前环境的是PC端还是无线端，浏览器类型和版本号的插件
                                     </li>
+                                    <li>
+                                        <a href="https://github.com/saucxs/jquery-component">jq的开发组件</a>
+                                        jq的开发组件
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </section>
+            </div>
+            <div class="content-right">
+                <section class="skill">
+                    <header class="section-hd">
+                        <span class="section-title-l"></span>
+                        <h2 class="section-title">技能</h2>
+                        <span class="section-title-r"></span>
+                    </header>
+                    <div class="section-bd">
+                        <!--技能:JS-->
+                        <div class="item">
+                            <header class="item-hd">
+                                <span class="item-time">Web</span>
+                                <a class="btn item-more">熟练</a>
+                            </header>
+                            <div class="item-bd">
+                                <ul class="section-content">
+                                    <li>熟知JS基本语法与知识，掌握最新JS语法与API</li>
+                                    <li>掌握网页重构所需的CSS、SCSS、postcss</li>
+                                    <li>掌握前端流行框架Vue、Angular</li>
+                                    <li>掌握chrome扩展开发</li>
+                                </ul>
+                            </div>
+                        </div>
 
+                        <!--VUE-->
+                        <div class="item">
+                            <header class="item-hd">
+                                <span class="item-time">VUE</span>
+                                <a class="btn item-more">熟练</a>
+                            </header>
+                            <div class="item-bd">
+                                <ul class="section-content">
+                                    <li>用vue开发大型复杂应用，熟知vue原理与生态技术栈经验丰富</li>
+                                    <li>掌握vue调试、性能优化、同构等扩展技能</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Nodejs-->
+                        <div class="item">
+                            <header class="item-hd">
+                                <span class="item-time">Nodejs</span>
+                                <a class="btn item-more">熟练</a>
+                            </header>
+                            <div class="item-bd">
+                                <ul class="section-content">
+                                    <li>掌握Nodejs标准库及模型，在实际项目中多处使用Nodejs</li>
+                                    <li>用Nodejs开发过服务中间件与其它构建工具</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--网络协议-->
+                        <div class="item">
+                            <header class="item-hd">
+                                <span class="item-time">网络协议</span>
+                                <a class="btn item-more">掌握</a>
+                            </header>
+                            <div class="item-bd">
+                                <ul class="section-content">
+                                    <li>掌握互联网基本运行机制，TCP与UDP协议</li>
+                                    <li>掌握HTTP协议，对新版HTTP2也有了解</li>
+                                    <li>掌握websocket协议，实现双向通信</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--数据库-->
+                        <div class="item">
+                            <header class="item-hd">
+                                <span class="item-time">数据库</span>
+                                <a class="btn item-more">掌握</a>
+                            </header>
+                            <div class="item-bd">
+                                <ul class="section-content">
+                                    <li>掌握关系型数据库基本概念与SQL</li>
+                                    <li>掌握Mysql、MongoDB、Redis及原理与搭建</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--其它-->
+                        <div class="item">
+                            <header class="item-hd">
+                                <span class="item-time">其它</span>
+                                <a class="btn item-more">掌握</a>
+                            </header>
+                            <div class="item-bd">
+                                <ul class="section-content">
+                                    <li>掌握Java、Git、Docker、SVN</li>
+                                    <li>常用JetBrains、Linux也用的来</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
             </div>
         </div>
     </main>
+    <footer class="github-footer">
+        <a class="footer-link" href="https://github.com/saucxs/resume">Host On Github</a>
+    </footer>
+    <script src="//at.alicdn.com/t/font_1111059_1208mx45via.js"></script>
 </body>
-<script  src="//at.alicdn.com/t/font_1111059_ahr2p6hgyt9.js"></script>
 </html>
