@@ -1,0 +1,37 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "webpack-dev-server --open --hot",
+    "build": "webpack --config webpack-dist.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saucxs/resume.git"
+  },
+  "keywords": [],
+  "author": "saucxs@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saucxs/resume/issues"
+  },
+  "homepage": "https://github.com/saucxs/resume#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "compass-mixins": "^0.12.10",
+    "css-loader": "^2.1.1",
+    "end-webpack-plugin": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html2canvas": "^1.0.0-alpha.12",
+    "jspdf": "^1.5.3",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.23.1",
+    "web-webpack-plugin": "^1.9.3",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
