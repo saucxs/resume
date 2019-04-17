@@ -59,7 +59,11 @@ a {
   font-size: 12px;
   text-align: right;
   @media screen and (max-width: 1024px){
-    display: none;
+    top: 0;
+    width: 100%;
+    margin-left: -50%;
+    padding-top: 5px;
+    padding-right: 8px;
   }
 }
 
@@ -72,7 +76,7 @@ a {
   @include border-radius(5px);
   @media screen and (max-width: 1024px){
     width: 100%;
-    margin: 0;
+    margin-top: 26px;
     @include border-radius(0)
   };
   & > .content-hd{
@@ -82,7 +86,7 @@ a {
     background-color: $color-green;
     overflow: hidden;
     @media screen and (max-width: 720px) {
-      padding: 25px 30px;
+      padding: 25px 20px;
     }
     .title {
       width: 100%;
@@ -99,7 +103,16 @@ a {
       font-weight: 300;
       overflow: hidden;
       padding-top: 14px;
-      line-height: 26px;
+      line-height: 24px;
+      ul {
+        li {
+          list-style: square inside;
+          font-size: 12px;
+          span{
+            font-weight: bold;
+          }
+        }
+      }
     }
     .name,
     .job,
@@ -143,6 +156,9 @@ a {
     .info {
       float: left;
       line-height: 22px;
+      ul {
+        margin: 8px 0 4px;
+      }
     }
     .icon{
       width: 16px;
