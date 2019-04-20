@@ -76,7 +76,7 @@ a {
   @include border-radius(5px);
   @media screen and (max-width: 1024px){
     width: 100%;
-    margin-top: 26px;
+    margin: 26px auto 0 auto;
     @include border-radius(0)
   };
   & > .content-hd{
