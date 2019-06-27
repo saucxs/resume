@@ -1,10 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const findChrome = require('chrome-finder');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const { WebPlugin } = require('web-webpack-plugin');
+const EndWebpackPlugin = require('end-webpack-plugin');
 
 const outputPath = path.resolve(__dirname, '.public');
 module.exports = {
@@ -17,7 +19,7 @@ module.exports = {
     // 加快搜索速度
     modules: [path.resolve(__dirname, 'node_modules')],
     // es tree-shaking
-    mainFields: ['jsnext:main', 'browser', 'main'],
+    mainFields: ['browser', 'main'],
   },
   module: {
       rules: [
@@ -72,5 +74,12 @@ module.exports = {
       filename: '[name]_[contenthash:8].css',
       allChunks: true,
     }),
+    new EndWebpackPlugin(async () => {
+        // 调用 Chrome 渲染出 PDF 文件
+        var chromePath = findChrome();
+        spawnSync(chromePath, ['--headless', '--disable-gpu', `--print-to-pdf=${path.resolve(outputPath, 'resume.pdf')}`,
+            'http://resume.chengxinsong.cn'
+        ]);
+    })
   ]
 };

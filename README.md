@@ -1,9 +1,6 @@
 ## 简历
 - 优化构建，页面秒开无闪烁
 - 自适应屏幕兼容移动端
+- pdf自动生成，pdf在线预览
 
-## 使用
-1. fork本项目后再clone到本地修改
-2. 进入项目目录执行`npm i`安装依赖
-3. 执行`npm run dev`开始开发
-4. 执行`npm run build`打包发布
+[在线地址http://resume.chengxinsong.cn](http://resume.chengxinsong.cn)
