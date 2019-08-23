@@ -7,6 +7,7 @@ const DefinePlugin = require('webpack/lib/DefinePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const { WebPlugin } = require('web-webpack-plugin');
 const EndWebpackPlugin = require('end-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const outputPath = path.resolve(__dirname, '.public');
 module.exports = {
@@ -74,6 +75,9 @@ module.exports = {
       filename: '[name]_[contenthash:8].css',
       allChunks: true,
     }),
+    new CopyWebpackPlugin([
+        { from:  path.resolve(__dirname, 'src/patent.pdf'), to: outputPath }
+    ]),
     new EndWebpackPlugin(async () => {
         // 调用 Chrome 渲染出 PDF 文件
         var chromePath = findChrome();
